@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cold Outreach Pro - Complete SaaS Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .hover-scale { transition: transform 0.2s; }
+        .hover-scale:hover { transform: scale(1.02); }
+        .chart-container { height: 300px; }
+        .revenue-chart { height: 400px; }
+        .pricing-card { transition: all 0.3s ease; }
+        .pricing-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-robot text-3xl"></i>
+                    <h1 class="text-2xl font-bold">AI Cold Outreach Pro</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <span class="bg-green-400 px-3 py-1 rounded-full text-sm font-semibold">Enterprise Plan</span>
+                    <div class="flex items-center space-x-2">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNGRkZGRkYiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSI+CjxwYXRoIGQ9Ik04IDEuMzMzMzNDNC4zMiAxLjMzMzMzIDEuMzMzMzMgNC4zMiAxLjMzMzMzIDhDMS4zMzMzMyAxMS42OCR4OjMuMiAxNC42NjY3IDggMTQuNjY2N0MxMS42OCAxNC42NjY3IDE0LjY2NjcgMTEuNjggMTQuNjY2NyA4QzE0LjY2NjcgNC4zMiAxMS42OCAxLjMzMzMzIDggMS4zMzMzM1oiIGZpbGw9IiM2NjdFRUEiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="User" class="w-8 h-8 rounded-full">
+                        <span class="font-medium">Admin User</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-8">
+                <a href="#dashboard" class="py-4 border-b-2 border-blue-500 text-blue-600 font-medium">Dashboard</a>
+                <a href="#campaigns" class="py-4 text-gray-600 hover:text-blue-600">Campaigns</a>
+                <a href="#analytics" class="py-4 text-gray-600 hover:text-blue-600">Analytics</a>
+                <a href="#revenue" class="py-4 text-gray-600 hover:text-blue-600">Revenue</a>
+                <a href="#users" class="py-4 text-gray-600 hover:text-blue-600">Users</a>
+                <a href="#settings" class="py-4 text-gray-600 hover:text-blue-600">Settings</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Dashboard Overview -->
+        <section id="dashboard" class="mb-12">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Dashboard Overview</h2>
+                <div class="flex items-center space-x-4">
+                    <select class="border border-gray-300 rounded-lg px-4 py-2">
+                        <option>Last 30 Days</option>
+                        <option>Last 7 Days</option>
+                        <option>Last Quarter</option>
+                    </select>
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                        <i class="fas fa-plus mr-2"></i>New Campaign
+                    </button>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow hover-scale">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 text-sm font-medium">Total Revenue</p>
+                            <p class="text-3xl font-bold text-green-600">$847,290</p>
+                            <p class="text-green-500 text-sm mt-1">
+                                <i class="fas fa-arrow-up"></i> +23% from last month
+                            </p>
+                        </div>
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i class="fas fa-dollar-sign text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow hover-scale">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 text-sm font-medium">Active Subscribers</p>
+                            <p class="text-3xl font-bold text-blue-600">12,547</p>
+                            <p class="text-blue-500 text-sm mt-1">
+                                <i class="fas fa-arrow-up"></i> +8% from last month
+                            </p>
+                        </div>
+                        <div class="bg-blue-100 p-3 rounded-full">
+                            <i class="fas fa-users text-blue-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow hover-scale">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 text-sm font-medium">Messages Sent</p>
+                            <p class="text-3xl font-bold text-purple-600">2.8M</p>
+                            <p class="text-purple-500 text-sm mt-1">
+                                <i class="fas fa-arrow-up"></i> +15% from last month
+                            </p>
+                        </div>
+                        <div class="bg-purple-100 p-3 rounded-full">
+                            <i class="fas fa-paper-plane text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow hover-scale">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-gray-600 text-sm font-medium">Response Rate</p>
+                            <p class="text-3xl font-bold text-orange-600">34.2%</p>
+                            <p class="text-orange-500 text-sm mt-1">
+                                <i class="fas fa-arrow-up"></i> +5.2% from last month
+                            </p>
+                        </div>
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-chart-line text-orange-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-4">Campaign Performance</h3>
+                    <div class="chart-container">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-4">Response Analytics</h3>
+                    <div class="chart-container">
+                        <canvas id="responseChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Tracking -->
+        <section id="revenue" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Revenue Analytics & Tracking</h2>
+            
+            <!-- Revenue Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Monthly Recurring Revenue</h3>
+                    <p class="text-4xl font-bold text-green-600 mb-2">$127,850</p>
+                    <div class="flex items-center text-sm text-green-500">
+                        <i class="fas fa-arrow-up mr-1"></i>
+                        <span>18% growth rate</span>
+                    </div>
+                    <div class="mt-4 pt-4 border-t">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">Annual Run Rate</span>
+                            <span class="font-semibold">$1.53M</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Customer Lifetime Value</h3>
+                    <p class="text-4xl font-bold text-blue-600 mb-2">$2,340</p>
+                    <div class="flex items-center text-sm text-blue-500">
+                        <i class="fas fa-arrow-up mr-1"></i>
+                        <span>12% increase</span>
+                    </div>
+                    <div class="mt-4 pt-4 border-t">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">Avg. Subscription Length</span>
+                            <span class="font-semibold">24 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Churn Rate</h3>
+                    <p class="text-4xl font-bold text-red-600 mb-2">2.8%</p>
+                    <div class="flex items-center text-sm text-green-500">
+                        <i class="fas fa-arrow-down mr-1"></i>
+                        <span>0.5% improvement</span>
+                    </div>
+                    <div class="mt-4 pt-4 border-t">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-600">Retention Rate</span>
+                            <span class="font-semibold">97.2%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Chart -->
+            <div class="bg-white p-6 rounded-xl card-shadow mb-8">
+                <h3 class="text-xl font-semibold mb-4">Revenue Growth Trend</h3>
+                <div class="revenue-chart">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Subscription Breakdown -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-4">Subscription Plans Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="subscriptionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-4">Revenue by Plan</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
+                                <span class="font-medium">Starter Plan</span>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold">$34,290</p>
+                                <p class="text-sm text-gray-600">2,860 subscribers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                                <span class="font-medium">Professional Plan</span>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold">$67,840</p>
+                                <p class="text-sm text-gray-600">3,392 subscribers</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
+                                <span class="font-medium">Enterprise Plan</span>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold">$25,720</p>
+                                <p class="text-sm text-gray-600">143 subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers -->
+        <section id="pricing" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Pricing Plans & Management</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Starter Plan -->
+                <div class="pricing-card bg-white rounded-2xl p-8 card-shadow">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-4">Perfect for small businesses</p>
+                        <div class="text-4xl font-bold text-blue-600 mb-2">$12<span class="text-lg text-gray-600">/month</span></div>
+                        <p class="text-sm text-gray-500">Billed monthly</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Up to 1,000 contacts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>5 active campaigns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Basic analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Email support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Google Sheets integration</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-center">
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Current Plan
+                        </button>
+                        <p class="text-sm text-gray-500 mt-2">2,860 active subscribers</p>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card bg-white rounded-2xl p-8 card-shadow border-2 border-green-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Professional</h3>
+                        <p class="text-gray-600 mb-4">For growing businesses</p>
+                        <div class="text-4xl font-bold text-green-600 mb-2">$20<span class="text-lg text-gray-600">/month</span></div>
+                        <p class="text-sm text-gray-500">Billed monthly</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Up to 10,000 contacts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Unlimited campaigns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Advanced analytics & A/B testing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>CRM integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span>AI-powered personalization</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-center">
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            Upgrade Plan
+                        </button>
+                        <p class="text-sm text-gray-500 mt-2">3,392 active subscribers</p>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card bg-white rounded-2xl p-8 card-shadow">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-4">For large organizations</p>
+                        <div class="text-4xl font-bold text-purple-600 mb-2">$180<span class="text-lg text-gray-600">/month</span></div>
+                        <p class="text-sm text-gray-500">Billed monthly</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-3"></i>
+                            <span>Unlimited contacts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-3"></i>
+                            <span>White-label solution</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-3"></i>
+                            <span>Custom integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-3"></i>
+                            <span>Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-3"></i>
+                            <span>Advanced security & compliance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-3"></i>
+                            <span>24/7 phone support</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-center">
+                        <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                            Contact Sales
+                        </button>
+                        <p class="text-sm text-gray-500 mt-2">143 active subscribers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Analytics -->
+        <section id="analytics" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Advanced Analytics & Performance</h2>
+            
+            <!-- Performance Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-gray-800">Open Rate</h3>
+                        <i class="fas fa-envelope-open text-blue-600"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-blue-600">68.4%</p>
+                    <div class="flex items-center text-sm text-green-500 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>
+                        <span>+3.2% vs last period</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-gray-800">Click Rate</h3>
+                        <i class="fas fa-mouse-pointer text-green-600"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-green-600">24.7%</p>
+                    <div class="flex items-center text-sm text-green-500 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>
+                        <span>+1.8% vs last period</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-gray-800">Conversion Rate</h3>
+                        <i class="fas fa-chart-line text-purple-600"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-purple-600">8.9%</p>
+                    <div class="flex items-center text-sm text-green-500 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>
+                        <span>+0.9% vs last period</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-semibold text-gray-800">ROI</h3>
+                        <i class="fas fa-dollar-sign text-orange-600"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-orange-600">340%</p>
+                    <div class="flex items-center text-sm text-green-500 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>
+                        <span>+12% vs last period</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A/B Testing Results -->
+            <div class="bg-white p-6 rounded-xl card-shadow mb-8">
+                <h3 class="text-xl font-semibold mb-6">A/B Testing Results</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Subject Line Test - Campaign #247</h4>
+                        <div class="space-y-4">
+                            <div class="p-4 border border-green-200 bg-green-50 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-green-800">Version A (Winner)</span>
+                                    <span class="bg-green-600 text-white px-2 py-1 rounded text-sm">+23%</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">"Boost Your Sales by 300% with AI Automation"</p>
+                                <div class="flex justify-between text-sm">
+                                    <span>Open Rate: <strong>72.3%</strong></span>
+                                    <span>Click Rate: <strong>28.1%</strong></span>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 border border-gray-200 bg-gray-50 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-gray-800">Version B</span>
+                                    <span class="bg-gray-400 text-white px-2 py-1 rounded text-sm">Control</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">"Increase Your Revenue with Smart Outreach"</p>
+                                <div class="flex justify-between text-sm">
+                                    <span>Open Rate: <strong>58.7%</strong></span>
+                                    <span>Click Rate: <strong>22.4%</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">CTA Button Test - Campaign #248</h4>
+                        <div class="space-y-4">
+                            <div class="p-4 border border-blue-200 bg-blue-50 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-blue-800">Version A (Winner)</span>
+                                    <span class="bg-blue-600 text-white px-2 py-1 rounded text-sm">+18%</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">Button: "Start Free Trial Now"</p>
+                                <div class="flex justify-between text-sm">
+                                    <span>Click Rate: <strong>31.2%</strong></span>
+                                    <span>Conversion: <strong>12.4%</strong></span>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 border border-gray-200 bg-gray-50 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-medium text-gray-800">Version B</span>
+                                    <span class="bg-gray-400 text-white px-2 py-1 rounded text-sm">Control</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">Button: "Get Started Today"</p>
+                                <div class="flex justify-between text-sm">
+                                    <span>Click Rate: <strong>26.4%</strong></span>
+                                    <span>Conversion: <strong>10.5%</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Performance Table -->
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <h3 class="text-xl font-semibold mb-6">Top Performing Campaigns</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="pb-3 font-semibold text-gray-800">Campaign Name</th>
+                                <th class="pb-3 font-semibold text-gray-800">Sent</th>
+                                <th class="pb-3 font-semibold text-gray-800">Open Rate</th>
+                                <th class="pb-3 font-semibold text-gray-800">Click Rate</th>
+                                <th class="pb-3 font-semibold text-gray-800">Conversions</th>
+                                <th class="pb-3 font-semibold text-gray-800">ROI</th>
+                                <th class="pb-3 font-semibold text-gray-800">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="space-y-2">
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 font-medium">Q4 Product Launch</td>
+                                <td class="py-4">45,230</td>
+                                <td class="py-4">74.2%</td>
+                                <td class="py-4">32.1%</td>
+                                <td class="py-4">1,847</td>
+                                <td class="py-4 text-green-600 font-semibold">420%</td>
+                                <td class="py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Active</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 font-medium">Holiday Special Offer</td>
+                                <td class="py-4">38,940</td>
+                                <td class="py-4">68.7%</td>
+                                <td class="py-4">28.9%</td>
+                                <td class="py-4">1,423</td>
+                                <td class="py-4 text-green-600 font-semibold">380%</td>
+                                <td class="py-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Scheduled</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 font-medium">Webinar Invitation</td>
+                                <td class="py-4">52,100</td>
+                                <td class="py-4">71.3%</td>
+                                <td class="py-4">25.4%</td>
+                                <td class="py-4">2,184</td>
+                                <td class="py-4 text-green-600 font-semibold">290%</td>
+                                <td class="py-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Completed</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4 font-medium">Customer Feedback Survey</td>
+                                <td class="py-4">29,850</td>
+                                <td class="py-4">65.8%</td>
+                                <td class="py-4">41.2%</td>
+                                <td class="py-4">876</td>
+                                <td class="py-4 text-green-600 font-semibold">150%</td>
+                                <td class="py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Active</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Management -->
+        <section id="users" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">User Management & Subscriptions</h2>
+            
+            <!-- User Statistics -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-xl card-shadow text-center">
+                    <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">12,547</h3>
+                    <p class="text-gray-600">Total Users</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow text-center">
+                    <i class="fas fa-user-plus text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">+847</h3>
+                    <p class="text-gray-600">New This Month</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow text-center">
+                    <i class="fas fa-star text-4xl text-yellow-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">11,890</h3>
+                    <p class="text-gray-600">Active Subscribers</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-shadow text-center">
+                    <i class="fas fa-crown text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">143</h3>
+                    <p class="text-gray-600">Enterprise Clients</p>
+                </div>
+            </div>
+
+            <!-- Recent Users Table -->
+            <div class="bg-white p-6 rounded-xl card-shadow">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-semibold">Recent User Activity</h3>
+                    <div class="flex items-center space-x-4">
+                        <input type="text" placeholder="Search users..." class="border border-gray-300 rounded-lg px-4 py-2">
+                        <select class="border border-gray-300 rounded-lg px-4 py-2">
+                            <option>All Plans</option>
+                            <option>Starter</option>
+                            <option>Professional</option>
+                            <option>Enterprise</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="pb-3 font-semibold text-gray-800">User</th>
+                                <th class="pb-3 font-semibold text-gray-800">Plan</th>
+                                <th class="pb-3 font-semibold text-gray-800">MRR</th>
+                                <th class="pb-3 font-semibold text-gray-800">Join Date</th>
+                                <th class="pb-3 font-semibold text-gray-800">Status</th>
+                                <th class="pb-3 font-semibold text-gray-800">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                                            JS
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">John Smith</p>
+                                            <p class="text-sm text-gray-600">john@company.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Professional</span>
+                                </td>
+                                <td class="py-4 font-semibold">$20</td>
+                                <td class="py-4">Nov 15, 2024</td>
+                                <td class="py-4">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Active</span>
+                                </td>
+                                <td class="py-4">
+                                    <button class="text-blue-600 hover:text-blue-800 mr-3">View</button>
+                                    <button class="text-gray-600 hover:text-gray-800">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                                            EM
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">Emily Martinez</p>
+                                            <p class="text-sm text-gray-600">emily@startup.io</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4">
+                                    <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Enterprise</span>
+                                </td>
+                                <td class="py-4 font-semibold">$180</td>
+                                <td class="py-4">Nov 12, 2024</td>
+                                <td class="py-4">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Active</span>
+                                </td>
+                                <td class="py-4">
+                                    <button class="text-blue-600 hover:text-blue-800 mr-3">View</button>
+                                    <button class="text-gray-600 hover:text-gray-800">Edit</button>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                                            DL
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">David Lee</p>
+                                            <p class="text-sm text-gray-600">david@agency.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="py-4">
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Starter</span>
+                                </td>
+                                <td class="py-4 font-semibold">$12</td>
+                                <td class="py-4">Nov 10, 2024</td>
+                                <td class="py-4">
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Trial</span>
+                                </td>
+                                <td class="py-4">
+                                    <button class="text-blue-600 hover:text-blue-800 mr-3">View</button>
+                                    <button class="text-gray-600 hover:text-gray-800">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Settings -->
+        <section id="settings" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">System Settings & Configuration</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Google Sheets Integration -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-6">Google Sheets Integration</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-green-50 border border-green-200 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fab fa-google text-green-600 text-xl mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-green-800">Google Sheets API</p>
+                                        <p class="text-sm text-green-600">Connected & Active</p>
+                                    </div>
+                                </div>
+                                <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Connected</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <p class="text-2xl font-bold text-gray-800">8,347</p>
+                                <p class="text-sm text-gray-600">Connected Sheets</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <p class="text-2xl font-bold text-gray-800">2.8M</p>
+                                <p class="text-sm text-gray-600">Total Leads Synced</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            Manage Permissions
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Email Configuration -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-6">Email Gateway Settings</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-blue-600 text-xl mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-blue-800">SendGrid Integration</p>
+                                        <p class="text-sm text-blue-600">Primary Gateway</p>
+                                    </div>
+                                </div>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Active</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <p class="text-2xl font-bold text-gray-800">99.2%</p>
+                                <p class="text-sm text-gray-600">Delivery Rate</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <p class="text-2xl font-bold text-gray-800">847K</p>
+                                <p class="text-sm text-gray-600">Emails/Month</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            Configure Gateway
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Payment Processing -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-6">Payment Processing</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-purple-50 border border-purple-200 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fab fa-stripe text-purple-600 text-xl mr-3"></i>
+                                    <div>
+                                        <p class="font-medium text-purple-800">Stripe Integration</p>
+                                        <p class="text-sm text-purple-600">Payment Gateway</p>
+                                    </div>
+                                </div>
+                                <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Live</span>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <p class="text-2xl font-bold text-gray-800">$847K</p>
+                                <p class="text-sm text-gray-600">Monthly Volume</p>
+                            </div>
+                            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                                <p class="text-2xl font-bold text-gray-800">99.8%</p>
+                                <p class="text-sm text-gray-600">Success Rate</p>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                            View Transactions
+                        </button>
+                    </div>
+                </div>
+
+                <!-- System Health -->
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h3 class="text-xl font-semibold mb-6">System Health & Performance</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="font-medium">API Response Time</span>
+                            </div>
+                            <span class="text-green-600 font-semibold">142ms</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="font-medium">Server Uptime</span>
+                            </div>
+                            <span class="text-green-600 font-semibold">99.99%</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+                                <span class="font-medium">Database Load</span>
+                            </div>
+                            <span class="text-yellow-600 font-semibold">67%</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                                <span class="font-medium">Queue Processing</span>
+                            </div>
+                            <span class="text-green-600 font-semibold">Normal</span>
+                        </div>
+                        
+                        <button class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700">
+                            View System Logs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">AI Cold Outreach Pro</h3>
+                    <p class="text-gray-400">Enterprise-grade automation platform</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-gray-400">© 2024 AI Outreach Pro. All rights reserved.</p>
+                    <p class="text-sm text-gray-500">Version 2.4.1 | Last updated: Nov 20, 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Performance Chart
+        const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(performanceCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Messages Sent',
+                    data: [145000, 165000, 178000, 192000, 187000, 203000, 218000, 234000, 247000, 258000, 271000, 289000],
+                    borderColor: '#3B82F6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: 'Responses',
+                    data: [42000, 48000, 52000, 57000, 54000, 61000, 67000, 72000, 76000, 79000, 83000, 89000],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Response Chart
+        const responseCtx = document.getElementById('responseChart').getContext('2d');
+        new Chart(responseCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Opened', 'Clicked', 'Replied', 'Unsubscribed', 'Bounced'],
+                datasets: [{
+                    data: [68.4, 24.7, 8.9, 2.3, 1.2],
+                    backgroundColor: [
+                        '#3B82F6',
+                        '#10B981',
+                        '#F59E0B',
+                        '#EF4444',
+                        '#6B7280'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Monthly Recurring Revenue',
+                    data: [89000, 92000, 95000, 98000, 101000, 105000, 109000, 114000, 118000, 123000, 127000, 132000],
+                    backgroundColor: 'rgba(16, 185, 129, 0.8)',
+                    borderColor: '#10B981',
+                    borderWidth: 1
+                }, {
+                    label: 'New Revenue',
+                    data: [12000, 15000, 8000, 18000, 11000, 22000, 14000, 19000, 16000, 21000, 13000, 25000],
+                    backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                    borderColor: '#3B82F6',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Subscription Chart
+        const subscriptionCtx = document.getElementById('subscriptionChart').getContext('2d');
+        new Chart(subscriptionCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Starter Plan', 'Professional Plan', 'Enterprise Plan'],
+                datasets: [{
+                    data: [2860, 3392, 143],
+                    backgroundColor: [
+                        '#3B82F6',
+                        '#10B981',
+                        '#8B5CF6'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Dynamic data updates (simulated)
+        setInterval(() => {
+            // Update some metrics randomly to show live data
+            const metrics = document.querySelectorAll('.text-3xl.font-bold');
+            metrics.forEach(metric => {
+                if (metric.textContent.includes('$')) {
+                    // Simulate revenue growth
+                    const currentValue = parseInt(metric.textContent.replace(/[$,]/g, ''));
+                    const newValue = currentValue + Math.floor(Math.random() * 100);
+                    metric.textContent = '$' + newValue.toLocaleString();
+                }
+            });
+        }, 30000); // Update every 30 seconds
+    </script>
+</body>
+</html>
